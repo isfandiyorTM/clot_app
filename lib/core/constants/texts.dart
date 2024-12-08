@@ -17,6 +17,7 @@ class ClotTexts{
   static const String whoDoYouShopFor =  "Who do you shop for ?";
   static const String howOldAreYou =  "How Old are you ?";
   static const String categories =  "Categories";
+  static const String newIn =  "New In";
   static const String topSelling =  "Top Selling";
 
   // Categories
@@ -25,6 +26,7 @@ class ClotTexts{
   static const String shoes =  "Shoes";
   static const String bag =  "Bag";
   static const String accessories =  "Accessories";
+  static const String shopByCategories =  "Shop by Categories";
 
 
   //Button texts
