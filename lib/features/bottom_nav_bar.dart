@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
 import '../core/constants/colors.dart';
+import 'home/categories_page.dart';
 import 'home/home_page.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -15,7 +16,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-     HoodieGridScreen(),
+    HomePage(),
     NotificationsPage(),
     BookmarksPage(),
     ProfilePage(),

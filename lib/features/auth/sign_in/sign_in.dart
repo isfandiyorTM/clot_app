@@ -1,6 +1,7 @@
 import 'package:clot/core/constants/images.dart';
 import 'package:clot/core/constants/texts.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 
 import '../../../core/constants/colors.dart';
 import '../../../core/route/route_names.dart';

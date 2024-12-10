@@ -1,5 +1,6 @@
 import 'package:clot/core/constants/texts.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 
 import '../../../core/constants/colors.dart';
 import '../../../core/route/route_names.dart';
@@ -16,9 +17,20 @@ class SignInPassword extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const SizedBox(height: 100,),
+            IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              style: IconButton.styleFrom(
+                backgroundColor: ClotColors.bgLight,
+              ),
+              icon: const Icon(IconsaxPlusBroken.arrow_left_2),
+              color: ClotColors.black,
+            ),
+            const SizedBox(height: 20,),
             const Text(
               ClotTexts.singIn,
               style: TextStyle(
@@ -33,7 +45,7 @@ class SignInPassword extends StatelessWidget {
             AccountContinueButton(
               buttonText: ClotTexts.buttonContinueText,
               onPressed: () {
-                Navigator.pushNamed(context, RouteNames.homePage);
+                Navigator.pushNamed(context, RouteNames.bottomNavbar);
               },
             ),
             Row(

@@ -44,8 +44,8 @@ class AppRoute {
       case RouteNames.categories:
         String category = routeSettings.arguments as String;
         return MaterialPageRoute(builder: (_) =>   Categories(category: category,));
-      case RouteNames.grid:
-        return MaterialPageRoute(builder: (_) =>     HoodieGridScreen());
+
+
       default:
         return _errorRoute();
     }

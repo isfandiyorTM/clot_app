@@ -20,7 +20,9 @@ class ShopByCategoriesPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 style: IconButton.styleFrom(
                   backgroundColor: ClotColors.bgLight,
                 ),

@@ -7,14 +7,17 @@ class Categorybutton extends StatelessWidget {
     super.key,
     required this.buttonImage,
     required this.buttonText,
+    required this.onPressed,
   });
 
   String? buttonImage;
   String? buttonText;
+  VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: onPressed,
       child: Container(
         padding: EdgeInsets.only(right: 10),
         child: Column(

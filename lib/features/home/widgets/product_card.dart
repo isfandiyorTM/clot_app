@@ -1,103 +1,115 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
-
 import '../../../core/constants/colors.dart';
-import '../../../core/constants/images.dart';
-import '../../../core/constants/texts.dart';
 
 class ProductCard extends StatefulWidget {
-  const ProductCard({
-    super.key,
+  final String image;
+  final String name;
+  final double price;
+  bool isSale;
+
+  ProductCard({
+    Key? key,
+    required this.image,
+    required this.name,
+    required this.price,
     required this.isSale,
-  });
-  final bool isSale;
+  }) : super(key: key);
 
   @override
   State<ProductCard> createState() => _ProductCardState();
 }
 
 class _ProductCardState extends State<ProductCard> {
-
+  bool isLiked = false;
 
   @override
   Widget build(BuildContext context) {
-    bool isLiked = false;
-
     return Container(
-      padding: const EdgeInsets.only(right: 10),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(16),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.1),
+            blurRadius: 10,
+            offset: const Offset(0, 5),
+          ),
+        ],
       ),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Stack to overlay like button on the image
+          // Image with Like Button
           Stack(
             children: [
-              // Product Image
-              const Image(
-                image: AssetImage(ClotImages.productImage),
+              ClipRRect(
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+                child: Image.asset(
+                  widget.image,
+                  fit: BoxFit.cover,
+                  // height: 200,
+                  width: double.infinity,
+                ),
               ),
-              // Like Button
               Positioned(
-                right: 10,
-                top: 10,
+                top: 8,
+                right: 8,
                 child: GestureDetector(
                   onTap: () {
-                    print("pressed");
                     setState(() {
                       isLiked = !isLiked;
                     });
                   },
-                  child: Icon(
-                    isLiked ? CupertinoIcons.heart_fill: IconsaxPlusBroken.heart ,
-                    color:ClotColors.black,
-                    size: 20,
+                  child: Container(
+                    padding: const EdgeInsets.all(8),
+                    child: Icon(
+                      isLiked ? IconsaxPlusBold.heart: IconsaxPlusBroken.heart,
+                      color: isLiked ? Colors.red : Colors.grey,
+                    ),
                   ),
                 ),
               ),
             ],
           ),
           Container(
-            width: 159,
-            decoration: const BoxDecoration(
-              color: ClotColors.bgLight,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(10),
-                bottomRight: Radius.circular(10),
+            color: ClotColors.bgLight,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    widget.name,
+                    style: const TextStyle(fontSize: 12, color: ClotColors.black,fontWeight: FontWeight.w400),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  const SizedBox(height: 4),
+                  Row(
+                    children: [
+                      Text(
+                        '\$${widget.price}',
+                        style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: ClotColors.black,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Text(
+                        widget.isSale ? '\$158.00' : '',
+                        style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: ClotColors.textLightBlack,
+                          decoration: TextDecoration.lineThrough,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-            ),
-            padding: const EdgeInsets.only(left: 5, top: 10, bottom: 15),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  ClotTexts.jacket,
-                  style: TextStyle(fontSize: 12, color: ClotColors.black),
-                ),
-                const SizedBox(height: 5),
-                Row(
-                  children: [
-                    const Text(
-                      '\$148.00',
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: ClotColors.black,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    Text(
-                      widget.isSale ? '\$148.00' : '',
-                      style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: ClotColors.textLightBlack,
-                        decoration: TextDecoration.lineThrough,
-                      ),
-                    ),
-                  ],
-                )
-              ],
             ),
           ),
         ],

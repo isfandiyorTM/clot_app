@@ -1,6 +1,8 @@
 import 'package:clot/core/constants/texts.dart';
 import 'package:flutter/material.dart';
+import 'package:iconsax_plus/iconsax_plus.dart';
 
+import '../../../core/constants/colors.dart';
 import '../../../core/route/route_names.dart';
 import '../widgets/custom_button.dart';
 import '../widgets/custom_input.dart';
@@ -14,11 +16,21 @@ class CreateAccount extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 200, left: 30, right: 30),
+          padding: const EdgeInsets.only(top: 130, left: 30, right: 30),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                style: IconButton.styleFrom(
+                  backgroundColor: ClotColors.bgLight,
+                ),
+                icon: const Icon(IconsaxPlusBroken.arrow_left_2),
+                color: ClotColors.black,
+              ),
+              const SizedBox(height: 20,),
               const Text(
                 ClotTexts.createAccountHeading,
                 style: TextStyle(

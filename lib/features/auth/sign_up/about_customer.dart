@@ -128,7 +128,7 @@ class _AboutCustomerState extends State<AboutCustomer> {
       bottomSheet: Padding(
         padding: const EdgeInsets.only(left: 30.0 , right: 30 , bottom: 20 ,top: 15),
         child: AccountContinueButton(buttonText: ClotTexts.finish, onPressed: (){
-          Navigator.pushNamed(context, RouteNames.homePage);
+          Navigator.pushNamed(context, RouteNames.bottomNavbar);
         },),
       ),
     );

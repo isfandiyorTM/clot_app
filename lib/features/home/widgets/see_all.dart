@@ -8,9 +8,11 @@ class SeeAll extends StatelessWidget {
   SeeAll({
     super.key,
     required this.type,
+    required this.onPressed,
   });
 
   String? type;
+  VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class SeeAll extends StatelessWidget {
               color: ClotColors.black),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: onPressed,
           child: const Text(
             ClotTexts.seeAll,
             style: TextStyle(
