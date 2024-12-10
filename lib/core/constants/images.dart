@@ -21,4 +21,6 @@ class ClotImages{
   static const String categoryAccessories = 'assets/images/category_accessories.png';
   static const String productSlides = 'assets/images/slides.png';
   static const String productJacket = 'assets/images/jacket.png';
+  static const String notification = 'assets/images/bell.png';
+  static const String order = 'assets/images/orders_image.png';
 }

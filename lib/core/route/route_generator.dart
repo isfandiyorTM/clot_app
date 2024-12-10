@@ -7,6 +7,7 @@ import 'package:clot/features/bottom_nav_bar.dart';
 import 'package:clot/features/home/home_page.dart';
 import 'package:clot/features/home/shop_by_categories_page.dart';
 import 'package:clot/features/intro/splash_screen.dart';
+import 'package:clot/features/orders/pages/order_details.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/auth/sign_in/sign_in_password.dart';
@@ -44,7 +45,9 @@ class AppRoute {
       case RouteNames.categories:
         String category = routeSettings.arguments as String;
         return MaterialPageRoute(builder: (_) =>   Categories(category: category,));
-
+      case RouteNames.orderDetails:
+        String order = routeSettings.arguments as String;
+        return MaterialPageRoute(builder: (_) =>     OrderDetails(order: order,));
 
       default:
         return _errorRoute();

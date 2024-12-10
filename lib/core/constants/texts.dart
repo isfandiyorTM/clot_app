@@ -66,5 +66,30 @@ class ClotTexts{
   static const String slidesPrice =  "\$55.00";
   static const String slidesPriceSale =  "\$55.00";
 
+
+  // Notification texts
+  static const String notification =  "Notifications";
+  static const String noNotification =  "No Notification yet";
+  static const String exploreCategories =  "Explore Categories";
+  static const String notificationMessage1 =  "Gilbert, you placed and order check your \norder history for full details";
+  static const String notificationMessage2 =  "Gilbert, Thank you for shopping with us we\n have canceled order #24568.";
+  static const String notificationMessage3 =  "Gilbert, your Order #24568 has been  \nconfirmed check  your order history for full details";
+
+  // Orders texts
+  static const String orders =  "Orders";
+  static const String noOrders =  "No Orders yet";
+  static const String processing =  "Processing";
+  static const String shipped =  "Shipped";
+  static const String delivered =  "Delivered";
+  static const String returned =  "Returned";
+  static const String canceled =  "Canceled";
+  static const String order1 =  "Order  #456765";
+  static const String order2 =  "Order  #454569";
+  static const String order3 =  "Order  #454809";
+  static const String shippingDetails =  "Shipping details";
+  static const String detailAddress = '2715 Ash Dr. San Jose, South Dakota 83475';
+  static const String detailPhone = '121-224-7890';
+
+
 }
 

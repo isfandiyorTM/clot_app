@@ -11,4 +11,5 @@ class RouteNames {
   static const String shopByCategories = '/shopByCategories';
   static const String categories = '/categories';
   static const String grid = '/grid';
+  static const String orderDetails = '/orderDetails';
 }

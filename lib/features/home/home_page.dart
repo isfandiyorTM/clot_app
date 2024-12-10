@@ -2,6 +2,7 @@ import 'package:clot/core/constants/colors.dart';
 import 'package:clot/core/constants/images.dart';
 import 'package:clot/core/constants/texts.dart';
 import 'package:clot/core/route/route_names.dart';
+import 'package:clot/features/bottom_nav_bar.dart';
 import 'package:clot/features/home/widgets/category_button.dart';
 import 'package:clot/features/home/widgets/custom_input.dart';
 import 'package:clot/features/home/widgets/product_card.dart';
@@ -138,7 +139,8 @@ class _HomePageState extends State<HomePage> {
             Padding(
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                },
                 icon: const Icon(
                   IconsaxPlusBroken.bag_2,
                   size: 20,
