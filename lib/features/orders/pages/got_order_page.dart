@@ -40,11 +40,15 @@ class GotOrderPage extends StatelessWidget {
                 ),
                 OrderWidget(
                   message: ClotTexts.order2,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, RouteNames.orderDetails , arguments: ClotTexts.order2);
+                  },
                 ),
                 OrderWidget(
                   message: ClotTexts.order3,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, RouteNames.orderDetails , arguments: ClotTexts.order3);
+                  },
                 ),
               ],
             ),

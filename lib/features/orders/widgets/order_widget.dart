@@ -22,7 +22,7 @@ class OrderWidget extends StatelessWidget {
             Row(
               children: [
                 const Icon(
-                  IconsaxPlusBroken.notification_bing,
+                  IconsaxPlusBroken.receipt_1,
                   color: ClotColors.black,
                 ),
                 const SizedBox(

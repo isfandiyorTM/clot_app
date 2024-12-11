@@ -89,6 +89,9 @@ class ClotTexts{
   static const String shippingDetails =  "Shipping details";
   static const String detailAddress = '2715 Ash Dr. San Jose, South Dakota 83475';
   static const String detailPhone = '121-224-7890';
+  static const String orderConfirmed = 'Order Confirmed ';
+  static const String orderPlaced = 'Order Placed ';
+  static const String orderItems = 'Order Items ';
 
 
 }
