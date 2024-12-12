@@ -3,10 +3,10 @@ import 'package:iconsax_plus/iconsax_plus.dart';
 
 import '../../../core/constants/colors.dart';
 
-class OrderWidget extends StatelessWidget {
-  OrderWidget({super.key, required this.message , required this.onPressed});
+class WishlistItemWidget extends StatelessWidget {
+  WishlistItemWidget({super.key, required this.type , required this.onPressed});
   VoidCallback onPressed;
-  String? message;
+  String? type;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class OrderWidget extends StatelessWidget {
             Row(
               children: [
                 const Icon(
-                  IconsaxPlusBroken.receipt_1,
+                  IconsaxPlusBroken.heart,
                   color: ClotColors.black,
                 ),
                 const SizedBox(
@@ -35,7 +35,7 @@ class OrderWidget extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      message!,
+                      type!,
                       style: const TextStyle(
                         fontSize: 16,
                         color: ClotColors.black,

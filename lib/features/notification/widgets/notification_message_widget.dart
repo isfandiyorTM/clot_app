@@ -15,7 +15,10 @@ class NotificationMessage extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(20),
       margin: const EdgeInsets.only(bottom: 20),
-      color: ClotColors.bgLight,
+      decoration: BoxDecoration(
+        color: ClotColors.bgLight,
+        borderRadius: BorderRadius.circular(10),
+      ),
       child:  Row(
         children: [
           const Icon(

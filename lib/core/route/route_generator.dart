@@ -8,6 +8,13 @@ import 'package:clot/features/home/home_page.dart';
 import 'package:clot/features/home/shop_by_categories_page.dart';
 import 'package:clot/features/intro/splash_screen.dart';
 import 'package:clot/features/orders/pages/order_details.dart';
+import 'package:clot/features/profile/pages/add_address_page.dart';
+import 'package:clot/features/profile/pages/add_card_page.dart';
+import 'package:clot/features/profile/pages/address_page.dart';
+import 'package:clot/features/profile/pages/payment_page.dart';
+import 'package:clot/features/profile/pages/wishlist_details.dart';
+import 'package:clot/features/profile/pages/wishlist_page.dart';
+import 'package:clot/features/profile/widgets/address_detail.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/auth/sign_in/sign_in_password.dart';
@@ -48,6 +55,19 @@ class AppRoute {
       case RouteNames.orderDetails:
         String order = routeSettings.arguments as String;
         return MaterialPageRoute(builder: (_) =>     OrderDetails(order: order,));
+      case RouteNames.address:
+        return MaterialPageRoute(builder: (_) =>     const AddressPage());
+      case RouteNames.addAddress:
+        return MaterialPageRoute(builder: (_) =>     AddAddressPage());
+      case RouteNames.payment:
+        return MaterialPageRoute(builder: (_) =>     const PaymentPage());
+      case RouteNames.addCard:
+        return MaterialPageRoute(builder: (_) =>     AddCardPage());
+      case RouteNames.wishlist:
+        return MaterialPageRoute(builder: (_) =>     WishlistPage());
+      case RouteNames.wishlistDetails:
+        String type = routeSettings.arguments as String;
+        return MaterialPageRoute(builder: (_) =>     WishlistDetails(type: type));
 
       default:
         return _errorRoute();

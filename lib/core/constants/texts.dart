@@ -93,6 +93,43 @@ class ClotTexts{
   static const String orderPlaced = 'Order Placed ';
   static const String orderItems = 'Order Items ';
 
+  // Profile texts
+  static const String userFullName = "Isfandiyor Madaminov";
+  static const String userEmail = "isfanidyormadaminov12@gmail.com";
+  static const String userPhoneNumber = "+998 (77) 777 77 77";
+  static const String address = "Address";
+  static const String addAddress = "Add Address";
+  static const String wishlist = "Wishlist";
+  static const String payment = "Payment";
+  static const String help = "Help";
+  static const String support = "Support";
+  static const String signOut = "Sign Out";
+  static const String addressDetail = "2715 Ash Dr. San Jose, South Dakota 83475";
+  static const String streetAddress = "Street Address";
+  static const String enterStreetAddress = 'Please enter your street address';
+  static const String city = "City";
+  static const String enterCity ='Please enter your city';
+  static const String state = "State";
+  static const String enterState ='Please enter your state';
+  static const String zipCode = "Zip Code";
+  static const String enterZipCode ='Please enter your zip code';
+  static const String save ='Save';
+
+  static const String addCard ='Add Card';
+  static const String cardNumber = "Card Number";
+  static const String enterCardNumber ='Please enter your card number';
+  static const String ccv ='CCV';
+  static const String enterCCV ='Please enter your card ccv';
+  static const String exp ='Exp';
+  static const String enterExp ='Please enter your card exp';
+  static const String cardholderName ='Cardholder Name';
+  static const String enterCardholderName ='Please enter your card cardholder number';
+
+  static const String cards ='Cards';
+  static const String paypal ='Paypal';
+  static const String myFavourite ='My Favourite';
+  static const String tShirt ='T-Shirts';
+
 
 }
 

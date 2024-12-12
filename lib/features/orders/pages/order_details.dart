@@ -72,45 +72,45 @@ class OrderDetails extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 10),
-              GestureDetector(
-                onTap: () {},
-                child: Container(
-                  padding: const EdgeInsets.all(20),
-                  margin: const EdgeInsets.only(bottom: 20),
+              Container(
+                padding: const EdgeInsets.all(20),
+                margin: const EdgeInsets.only(bottom: 20),
+                decoration: BoxDecoration(
                   color: ClotColors.bgLight,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Row(
-                        children: [
-                          Icon(
-                            IconsaxPlusBroken.receipt_1,
-                            color: ClotColors.black,
-                          ),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          Text(
-                            '4 items',
-                            style: TextStyle(
-                                fontSize: 16,
-                                color: ClotColors.black,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                      TextButton(
-                        onPressed: () {},
-                        child: const Text(
-                          'View All',
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Row(
+                      children: [
+                        Icon(
+                          IconsaxPlusBroken.receipt_1,
+                          color: ClotColors.black,
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Text(
+                          '4 items',
                           style: TextStyle(
-                            color: ClotColors.purple,
-                            fontSize: 12,
-                          ),
+                              fontSize: 16,
+                              color: ClotColors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'View All',
+                        style: TextStyle(
+                          color: ClotColors.purple,
+                          fontSize: 12,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
               const SizedBox(height: 30),
@@ -126,7 +126,10 @@ class OrderDetails extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(20),
                 width: double.infinity,
-                color: ClotColors.bgLight,
+                decoration: BoxDecoration(
+                  color: ClotColors.bgLight,
+                  borderRadius: BorderRadius.circular(10),
+                ),
                 child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [

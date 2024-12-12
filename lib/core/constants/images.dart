@@ -23,4 +23,6 @@ class ClotImages{
   static const String productJacket = 'assets/images/jacket.png';
   static const String notification = 'assets/images/bell.png';
   static const String order = 'assets/images/orders_image.png';
+  static const String card = 'assets/images/card.png';
+  static const String search = 'assets/images/search.png';
 }

@@ -1,12 +1,11 @@
 import 'package:clot/features/home/shop_by_categories_page.dart';
 import 'package:clot/features/orders/pages/order_page.dart';
-import 'package:clot/help.dart';
+import 'package:clot/features/profile/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
 import '../core/constants/colors.dart';
 import 'Notification/pages/notification_page.dart';
-import 'home/categories_page.dart';
 import 'home/home_page.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -69,14 +68,3 @@ class _BottomNavBarState extends State<BottomNavBar> {
   }
 }
 
-class ProfilePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Profile Page',
-        style: TextStyle(fontSize: 24),
-      ),
-    );
-  }
-}

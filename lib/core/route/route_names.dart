@@ -12,4 +12,10 @@ class RouteNames {
   static const String categories = '/categories';
   static const String grid = '/grid';
   static const String orderDetails = '/orderDetails';
+  static const String address = '/address';
+  static const String addAddress = '/addAddress';
+  static const String payment = '/payment';
+  static const String addCard = '/addCard';
+  static const String wishlist = '/wishlist';
+  static const String wishlistDetails = '/wishlistDetails';
 }
