@@ -129,7 +129,23 @@ class ClotTexts{
   static const String paypal ='Paypal';
   static const String myFavourite ='My Favourite';
   static const String tShirt ='T-Shirts';
+  static const String noSearchMatch ="Sorry, we couldn't find any matching result for your Search.";
 
+  static const String cart ='Cart';
+  static const String emptyCart ='Your Cart is Empty';
+
+  static const String removeAll = "Remove All";
+  static const String subtotal = "Subtotal";
+  static const String shippingCost = "Shipping Cost";
+  static const String tax = "Tax";
+  static const String total = "Total";
+  static const String enterCouponCode = "Enter Coupon Code";
+  static const String checkout = "Checkout";
+  static const String placeOrder = "Place Order";
+  static const String shippingAddress = "Shipping Address";
+  static const String paymentMethod = "Payment Method";
+  static const String addShippingAddress = "Add Shipping Address";
+  static const String addPaymentMethod = "Add Payment Method";
 
 }
 

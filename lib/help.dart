@@ -1,90 +1,143 @@
 import 'package:flutter/material.dart';
 
-class SearchTabBarExample extends StatelessWidget {
+class CartScreen extends StatelessWidget {
+  final List<Map<String, dynamic>> cartItems = [
+    {
+      'name': "Men's Harrington Jacket",
+      'size': 'M',
+      'color': 'Lemon',
+      'price': 148.00,
+      'image': 'https://via.placeholder.com/100', // Yangi surat url
+    },
+    {
+      'name': "Men's Coaches Jacket",
+      'size': 'M',
+      'color': 'Black',
+      'price': 52.00,
+      'image': 'https://via.placeholder.com/100', // Yangi surat url
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3, // Tablar soni
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          title: Row(
-            children: [
-              // Back Icon
-              IconButton(
-                icon: Icon(Icons.arrow_back, color: Colors.black),
-                onPressed: () {
-                  // Add your back navigation logic here
-                },
-              ),
-
-              // Search Bar
-              Expanded(
-                child: Container(
-                  height: 48,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(24),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Your Cart'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              // "Remove All" funksiyasi
+            },
+            child: const Text(
+              'Remove All',
+              style: TextStyle(color: Colors.black),
+            ),
+          ),
+        ],
+      ),
+      body: ListView.builder(
+        padding: const EdgeInsets.all(16),
+        itemCount: cartItems.length,
+        itemBuilder: (context, index) {
+          final item = cartItems[index];
+          return Container(
+            margin: const EdgeInsets.only(bottom: 16),
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Colors.grey[200],
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Row(
+              children: [
+                // Mahsulot rasmi
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.network(
+                    item['image'],
+                    width: 80,
+                    height: 80,
+                    fit: BoxFit.cover,
                   ),
-                  child: Row(
+                ),
+                const SizedBox(width: 16),
+                // Mahsulot detallari
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(width: 16),
-
-                      // Search Icon
-                      const Icon(Icons.search, color: Colors.black54),
-
-                      const SizedBox(width: 8),
-
-                      // TextField
-                      Expanded(
-                        child: TextField(
-                          decoration: InputDecoration(
-                            hintText: 'Search here...',
-                            border: InputBorder.none,
-                          ),
+                      Text(
+                        item['name'],
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
                         ),
                       ),
-
-                      // Clear Icon
-                      IconButton(
-                        icon: const Icon(Icons.close, color: Colors.black54),
-                        onPressed: () {
-                          // Add your clear text logic here
-                        },
+                      const SizedBox(height: 8),
+                      Text(
+                        'Size - ${item['size']}  Color - ${item['color']}',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Colors.grey[600],
+                        ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ],
-          ),
-          bottom: const TabBar(
-            labelColor: Colors.black,
-            unselectedLabelColor: Colors.grey,
-            indicatorColor: Colors.black,
-            tabs: [
-              Tab(text: 'Tab 1'),
-              Tab(text: 'Tab 2'),
-              Tab(text: 'Tab 3'),
-            ],
-          ),
-        ),
-        body: const TabBarView(
-          children: [
-            // Tab 1 content
-            Center(child: Text('Tab 1 Content')),
-
-            // Tab 2 content
-            Center(child: Text('Tab 2 Content')),
-
-            // Tab 3 content
-            Center(child: Text('Tab 3 Content')),
-          ],
-        ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    // Narx
+                    Text(
+                      '\$${item['price']}',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    // "+" va "-" tugmalari
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            // "+" bosilganda
+                          },
+                          icon: const Icon(
+                            Icons.add_circle,
+                            color: Colors.purple,
+                          ),
+                        ),
+                        IconButton(
+                          onPressed: () {
+                            // "-" bosilganda
+                          },
+                          icon: const Icon(
+                            Icons.remove_circle,
+                            color: Colors.purple,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }
 }
 
-void main() => runApp(MaterialApp(home: SearchTabBarExample()));
+void main() {
+  runApp(MaterialApp(
+    home: CartScreen(),
+    theme: ThemeData(
+      appBarTheme: const AppBarTheme(
+        backgroundColor: Colors.white,
+        elevation: 0,
+        iconTheme: IconThemeData(color: Colors.black),
+      ),
+    ),
+  ));
+}

@@ -4,6 +4,7 @@ import 'package:clot/features/auth/sign_in/forgot_password.dart';
 import 'package:clot/features/auth/sign_in/sent_email.dart';
 import 'package:clot/features/auth/sign_in/sign_in.dart';
 import 'package:clot/features/bottom_nav_bar.dart';
+import 'package:clot/features/checkout/pages/checkout_page.dart';
 import 'package:clot/features/home/home_page.dart';
 import 'package:clot/features/home/shop_by_categories_page.dart';
 import 'package:clot/features/intro/splash_screen.dart';
@@ -15,10 +16,12 @@ import 'package:clot/features/profile/pages/payment_page.dart';
 import 'package:clot/features/profile/pages/wishlist_details.dart';
 import 'package:clot/features/profile/pages/wishlist_page.dart';
 import 'package:clot/features/profile/widgets/address_detail.dart';
+import 'package:clot/features/search/search_page.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/auth/sign_in/sign_in_password.dart';
 import '../../features/auth/sign_up/create_account.dart';
+import '../../features/cart/pages/cart_page.dart';
 import '../../features/home/categories_page.dart';
 import '../../help.dart';
 
@@ -68,6 +71,12 @@ class AppRoute {
       case RouteNames.wishlistDetails:
         String type = routeSettings.arguments as String;
         return MaterialPageRoute(builder: (_) =>     WishlistDetails(type: type));
+      case RouteNames.search:
+        return MaterialPageRoute(builder: (_) =>     SearchPage());
+      case RouteNames.cart:
+        return MaterialPageRoute(builder: (_) =>     CartPage());
+      case RouteNames.checkout:
+        return MaterialPageRoute(builder: (_) =>     CheckoutPage());
 
       default:
         return _errorRoute();

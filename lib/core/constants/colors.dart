@@ -9,4 +9,5 @@ class ClotColors{
   static const Color textLightBlack = Color.fromRGBO(39, 39, 39, 0.5);
   static const Color white = Color(0xFFFFFFFF);
   static const Color red = Color(0xFFFA3636);
+  static const Color green = Color(0xFF5FB567);
 }

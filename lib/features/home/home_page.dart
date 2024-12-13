@@ -140,6 +140,7 @@ class _HomePageState extends State<HomePage> {
               padding: const EdgeInsets.only(right: 10),
               child: IconButton(
                 onPressed: () {
+                  Navigator.pushNamed(context, RouteNames.cart);
                 },
                 icon: const Icon(
                   IconsaxPlusBroken.bag_2,
@@ -161,7 +162,32 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
-                    CustomInput(hintText: ClotTexts.search),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.pushNamed(context, RouteNames.search);
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 15),
+                        decoration: BoxDecoration(
+                          color: ClotColors.bgLight,
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                        child: const Row(
+                          children: [
+                            Icon(IconsaxPlusBroken.search_normal_1),
+                            SizedBox(width: 10),
+                            Text(
+                              ClotTexts.search,
+                              style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w500,
+                                  color: ClotColors.black),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
                     const SizedBox(height: 20),
                     SeeAll(
                       type: ClotTexts.categories,

@@ -25,4 +25,6 @@ class ClotImages{
   static const String order = 'assets/images/orders_image.png';
   static const String card = 'assets/images/card.png';
   static const String search = 'assets/images/search.png';
+  static const String cart = 'assets/images/cart.png';
+  static const String orderPlacedSuccessfully = 'assets/images/order_placed_successfully.png';
 }
