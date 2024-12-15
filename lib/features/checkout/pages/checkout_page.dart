@@ -4,6 +4,8 @@ import 'package:clot/features/cart/pages/cart_items.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax_plus/iconsax_plus.dart';
 
+import '../../../core/route/route_names.dart';
+
 class CheckoutPage extends StatelessWidget {
   const CheckoutPage({super.key});
 
@@ -146,7 +148,7 @@ class CheckoutPage extends StatelessWidget {
                 minWidth: double.infinity,
                 child: MaterialButton(
                   onPressed: () {
-
+                    Navigator.pushNamed(context, RouteNames.successfullyOrder);
                   },
                   height: 60,
                   color: ClotColors.purple,

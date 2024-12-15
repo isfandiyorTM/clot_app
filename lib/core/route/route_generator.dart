@@ -5,10 +5,12 @@ import 'package:clot/features/auth/sign_in/sent_email.dart';
 import 'package:clot/features/auth/sign_in/sign_in.dart';
 import 'package:clot/features/bottom_nav_bar.dart';
 import 'package:clot/features/checkout/pages/checkout_page.dart';
+import 'package:clot/features/checkout/pages/successull_order_page.dart';
 import 'package:clot/features/home/home_page.dart';
 import 'package:clot/features/home/shop_by_categories_page.dart';
 import 'package:clot/features/intro/splash_screen.dart';
 import 'package:clot/features/orders/pages/order_details.dart';
+import 'package:clot/features/orders/pages/order_page.dart';
 import 'package:clot/features/profile/pages/add_address_page.dart';
 import 'package:clot/features/profile/pages/add_card_page.dart';
 import 'package:clot/features/profile/pages/address_page.dart';
@@ -77,6 +79,10 @@ class AppRoute {
         return MaterialPageRoute(builder: (_) =>     CartPage());
       case RouteNames.checkout:
         return MaterialPageRoute(builder: (_) =>     CheckoutPage());
+      case RouteNames.successfullyOrder:
+        return MaterialPageRoute(builder: (_) =>     SuccessullOrderPage());
+      case RouteNames.order:
+        return MaterialPageRoute(builder: (_) =>     OrdersPage());
 
       default:
         return _errorRoute();

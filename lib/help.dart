@@ -7,14 +7,14 @@ class CartScreen extends StatelessWidget {
       'size': 'M',
       'color': 'Lemon',
       'price': 148.00,
-      'image': 'https://via.placeholder.com/100', // Yangi surat url
+      'image': 'https://via.placeholder.com/100',
     },
     {
       'name': "Men's Coaches Jacket",
       'size': 'M',
       'color': 'Black',
       'price': 52.00,
-      'image': 'https://via.placeholder.com/100', // Yangi surat url
+      'image': 'https://via.placeholder.com/100',
     },
   ];
 

@@ -11,6 +11,7 @@ class RouteNames {
   static const String shopByCategories = '/shopByCategories';
   static const String categories = '/categories';
   static const String grid = '/grid';
+  static const String order = '/order';
   static const String orderDetails = '/orderDetails';
   static const String address = '/address';
   static const String addAddress = '/addAddress';
@@ -21,4 +22,5 @@ class RouteNames {
   static const String search = '/search';
   static const String cart = '/cart';
   static const String checkout = '/checkout';
+  static const String successfullyOrder = '/successfullyOrder';
 }

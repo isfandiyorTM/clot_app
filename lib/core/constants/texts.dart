@@ -146,6 +146,8 @@ class ClotTexts{
   static const String paymentMethod = "Payment Method";
   static const String addShippingAddress = "Add Shipping Address";
   static const String addPaymentMethod = "Add Payment Method";
-
+  static const String orderPlacedSuccessfully = "Order Placed Successfully";
+  static const String receiveEmail = "You will recieve an email confirmation";
+  static const String seeOrderDetails = "See Order details";
 }
 
